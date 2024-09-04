@@ -1,14 +1,181 @@
 \documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
 
-\title{Management-Report-AMTE23}
-\author{Patrick Diehl}
-\date{August 2024}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{etoolbox}
+%\usepackage{a4wide}
+\usepackage{graphicx}
+
+\pagestyle{fancy}
+\fancyhf{}
+%\fancyhead[R]{Dr. Patrick Diehl}
+\fancyhead[c]{AMTE24 - Management report}
+\fancyfoot[C]{(\thepage /\pageref{LastPage})}
+\fancyfoot[R]{\today}
+\fancyfoot[L]{\includegraphics[scale=1]{by-nc-sa}}
+
+
+\title{AMTE23 - Management report}
+\author{Patrick Diehl  \\ Zahra Khatami \\ Steven R. Brandt \\ Parsa Amini}
+\date{\today}
 
 \begin{document}
 
 \maketitle
 
-\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Key indicators}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The first submission deadline was May 5th, with an extension to May 19th. We received four full papers at the first extension. Note that the workshop does not accept short papers. In total, four papers were submitted and four papers were accepted ($100$\%). The workshop was scheduled at August 26th, and we had an average attendance of 25 persons for the talks. The keynote was given by Joel Falcou (University Paris-Saclay), and 25 persons attended the keynote. The invited talks was given by Mehdi Goli (Codeplay, UK), and 30 persons attended. More details are available on the workshop's webpage\footnote{https://amte2023.stellar-group.org/}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Committees}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Organizing committee}
+\label{sec:committee}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+    \item Patrick Diehl, Applied Computer Science at Los Alamos National Laboratory, USA
+    \item Zahra Khatami, NVIDIA, USA
+    \item Steven R. Brandt, Center for Computation \& Technology at Louisiana State University, USA
+    \item Parsa Amini, Center for Computation \& Technology at Louisiana State University, USA
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Program committee}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Note that we tried to have a good mixture of European-based and American-based program committee members.
+
+\begin{itemize}
+
+    \item Thomas Heller, Exasol, Germany
+    \item Hartmut Kaiser, Louisiana State University, USA
+    \item Dirk Pleiter, KTH Royal Institute of Technology in Stockholm, Sweden
+    \item Roman Iakymchuk, Umea University, Sweden
+    \item Erwin Laure, Max Planck Computing \& Data Facility, Germany
+    \item Patricia Grubel, Los Alamos National Laboratory, USA
+    \item Vassilios Dimakopoulos, University of Ioannina, Greece
+    \item Metin H. Aktulga, Michigan State University, USA
+    \item Brad Richardson, Sourcery Institute, USA
+    \item Huda Ibeid, Intel, USA
+    \item J. “Ram” Ramanujam, Louisiana State University, USA
+    \item Thomas Fahringer, University of Innsbruck, Austria
+    \item Michael Wong, Codeplay Software, USA
+    \item Dirk Pflüger, University of Stuttgart, Germany
+    \item Peter Thoman, University of Innsbruck, Austria
+    \item Bryce Adelstein Lelbach, Nvidia, USA
+    \item Weile Wei, Lawrence Berkeley National Laboratory, USA
+    \item Brad Chamberlain, HPE, USA
+    \item Sumathi Lakshmiranganatha, Los Alamos National Laboratory, USA
+    \item Nikunj Gupta, Amazon, USA
+    \item Jan Ciesko, Sandia National Laboratories, USA
+   \item Tianyi Zhang, Amazon Web Service, USA
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Reviewers}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In addition to the organizers, these program committee members reviewed at least one paper:
+\begin{itemize}
+    \item Markus Rampp, Max Planck Computing and Data Facility, Germany
+    \item Jonas Posner, University of Kassel, Germany
+    \item Hartmut Kaiser, Louisiana State University, USA
+    \item Sumathi Lakshmiranganatha, Los Alamos National Laboratory, USA
+    \item Brad Richardson, Sourcery Institute, USA
+    \item Chris Taylor, Tatical Computing Lab, USA
+    \item  Marc-André Vef, Johannes Gutenberg-University Mainz, Germany
+    \item Javier Fernandez Muñoz, University Carlos III of Madrid, Spain
+    \item Pierre-Francois Dutot, Université Grenoble Alpes, France 
+\end{itemize}
+The reviewers were assigned to the papers based on their expertise and avoiding conflict of interest. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Review process management}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+At least three independent reviewers selected from the initial program committee reviewed each paper using EasyChair. Note that all reviewers are listed in Section~\ref{sec:committee}. The deadline for the reviewers was June 15th. The organization committee discussed all papers via email and made their final decision on June 19th. The final notifications were sent to the authors using EasyChair on June 20th. All papers were uploaded to iThenticate for a plagiarism check, and the report was provided to the submitting author. The authors were asked to address the highlighted issues in the iThenticate report and the reviewer’s comments before submitting the camera-ready version. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Program}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{itemize}
+ \item 09:00 - 09:01, Opening remarks
+ \item 09:01 - 09:45, Keynote Talk: Tools of the Trade Embracing Our Inner Craftsman (Joel Falcou)
+ \item 09:40 - 10:00, Lessons Learned and Scalability Achieved when Porting Uintah to DOE Exascale Systems (John Holmen)
+\item 10:00 - 10:30, Coffee Break
+\item 10:30 - 11:10, Invited talk: Expressing and Optimizing Task Graphs in Heterogeneous Programming through SYCL (Mehdi Goli)
+ \item   11:10 - 11:30, GVEL: Fast Graph Loading in Edgelist and Compressed Sparse Row (CSR) formats (Subhajit Shau)
+ \item 11:30 - 11:50, Investigating the Performance Difference of Task Communication via Futures or Side Effects (Lukas Reitz)
+ \item   11:50 - 12:10, Evaluating AI-generated code for C++, Fortran, Go, Java, Julia, Matlab, Python, R, and Rust (Patrick Diehl) 
+
+
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Keynote and Invited talk}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Keynote}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Tools of the Trade Embracing Our Inner Craftsman\\
+Joel Falcou, University Paris-Sud, Interdisciplinary Laboratory of Numerical Sciences (LISN), France
+    \begin{center}
+        \textbf{Abstract}
+    \end{center}
+Designing software tools and libraries represents a critical yet often overlooked aspect in the field of software engineering. Many prioritize rapid algorithm or application development, overlooking the productivity gains from thoughtful tools and library design. This presentation will argue for a more balanced approach, emphasizing the craftsmanship involved in creating robust, effective software tools. By focusing on the development of specialized, domain-specific tools and libraries, developers can achieve higher productivity and software quality. The talk will cover best practices, case studies, and methodologies for tool and library design, aiming to inspire attendees to embrace their inner craftsman in software development.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Invited talk}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Expressing and Optimizing Task Graphs in Heterogeneous Programming through SYCL\\  
+Mehdi Goli, Codeplay, UK
+    \begin{center}
+        \textbf{Abstract}
+    \end{center}
+For many compute-intensive problems today, heterogeneous computing is inevitable to meet the demands of these applications. Recent heterogeneous systems often contain multiple different accelerators in addition to the host CPU and leveraging the full computational power of such systems requires the management of complex dependencies between the tasks to overlap computation of independent tasks where possible. Heterogeneous programming is not only about implementing and optimizing kernels - complex heterogeneous applications also require the careful orchestration of multiple computational tasks. Modern heterogeneous programming models such as SYCL therefore not only allow to program a diverse set of accelerators with a single, portable programming model, but through their API also provide powerful facilities to manage task dependencies and parallel execution on multiple accelerators. In SYCL’s case, these facilities include explicit event-based synchronization that can also be found in more low-level models such as CUDA or OpenCL. SYCL also comes with mechanisms for automatic dependency management by the runtime implementation. The SYCL buffer and accessor model, which I will introduce in the talk, allows users to easily declare access requirements for data, while the runtime implementation automatically constructs the directed-acyclic graph of task dependencies in the background. This automatic tracking of dependencies between tasks not only relieves the user from the error-prone tasks of manually inserting synchronization into their code, but also provides opportunity for optimization of the task graph. In particular when offloading a series of tasks to an accelerator, there is potential for optimization by reducing the launch overhead or by leveraging faster memories for data exchange between dependent tasks. Further, with SYCL graphs and SYCL kernel fusion, I will present two extensions for the SYCL programming model that have proven very effective to perform such optimization with an easy-to-use API.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{List of accepted papers}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{enumerate}
+    \item Lessons Learned and Scalability Achieved when Porting Uintah to DOE Exascale Systems \\
+    Authors: John Holmen, Marta Garcia, Allen Sanderson, Abhishek Bagusetty, Martin Berzins
+    \begin{center}
+        \textbf{Abstract}
+    \end{center}
+A key challenge faced when preparing codes for Department of Energy (DOE) exascale systems was designing scalable applications for systems featuring hardware and software not yet available at leadership-class scale. With such systems now available, it is important to evaluate scalability of the resulting software solutions on these target systems. One such code designed with the exascale DOE Aurora and DOE Frontier systems in mind is the Uintah Computational Framework, an open-source asynchronous many-task runtime system. To prepare for exascale, Uintah adopted a portable MPI+X hybrid parallelism approach using the Kokkos performance portability library (i.e., MPI+Kokkos). This paper complements recent work with additional details and an evaluation of the resulting approach on Aurora and Frontier. Results are shown for a challenging benchmark demonstrating interoperability of 3 portable codes essential to Uintah-related combustion research. These results demonstrate single-source portability across Aurora and Frontier with strong-scaling characteristics shown to 768 Aurora nodes and 9,216 Frontier nodes. In addition to showing results run to new scales on new systems, this paper also discusses lessons learned through efforts preparing Uintah for exascale systems.
+    \item Investigating the Performance Difference of Task Communication via Futures or Side Effects \\
+    Authors: Lukas Reitz, Ben Gerhards, John Hundhausen, Claudia Fohry
+    \begin{center}
+        \textbf{Abstract}
+    \end{center}
+  Asynchronous Many-Tasking (AMT) is a popular approach to program irregular parallel applications. In AMT, the programmer divides the computation into units, called tasks, and an AMT runtime dynamically maps the tasks to workers for processing. AMT runtimes can be classified by their way of task generation and task cooperation. One of the approaches is Future-based Cooperation (FBC). FBC environments may or may not allow side effects (SE), i.e., task communication through read / write accesses to global data. The addition of SE increases expressiveness but may lead to data races. This paper investigates the performance difference of pure FBC programs and FBC programs with SE in a cluster environment. For that, we use a pair of closely related AMT runtimes that support FBC with and without SE, respectively. The latter is introduced in this paper. In first experiments, we observed a similar performance of equivalent benchmark implementations on the two platforms, suggesting that a carefully implemented AMT runtime may make the usage of pure FBC practical.
+        \item GVEL – Fast Graph Loading in Edgelist and Compressed Sparse Row (CSR) formats \\
+    Authors: Subhajit Shau, Kishore Kotapalli
+    \begin{center}
+        \textbf{Abstract}
+    \end{center}
+Efficient IO techniques are crucial in high-performance graph processing frameworks like Gunrock and Hornet, as fast graph loading can help minimize processing time and reduce system/cloud usage charges. This research study presents approaches for efficiently reading an Edgelist from a text file and converting it to a Compressed Sparse Row (CSR) representation. On a server with dual 16-core Intel Xeon Gold 6226R processors and MegaRAID SAS-3 storage, our approach, which we term as GVEL, outperforms Hornet, Gunrock, and PIGO by significant margins in CSR reading, exhibiting an average speedup of 78x, 112x, and 1.8x, respectively. For Edgelist reading, GVEL is 2.6x faster than PIGO on average, and achieves a Edgelist read rate of 1.9 billion edges/s. For every doubling of threads, GVEL improves performance at an average rate of 1.9x and 1.7x for reading Edgelist and reading CSR respectively.
+     \item Evaluating AI-generated code for C++, Fortran, Go, Java, Julia, Matlab, Python, R, and Rust\\
+    Authors: Patrick Diehl, Nojoud Nader, Steven R. Brandt, Hartmut Kaiser
+    \begin{center}
+        \textbf{Abstract}
+    \end{center}
+  This study evaluates the capabilities of ChatGPT versions 3.5 and 4 in generating code across a diverse range of programming languages. Our objective is to assess the effectiveness of these AI models for generating scientific programs. To this end, we asked ChatGPT to generate three distinct codes: a simple numerical integration, a conjugate gradient solver, and a parallel 1D stencil-based heat equation solver. The focus of our analysis was on the compilation, runtime performance, and accuracy of the codes. While both versions of ChatGPT successfully created codes that compiled and ran (with some help), some languages were easier for the AI to use than others (possibly because of the size of the training sets used). Parallel codes – even the simple example we chose to study here – also difficult for the AI to generate correctly.
+\end{enumerate}
+
+\label{LastPage}  
 \end{document}
+
